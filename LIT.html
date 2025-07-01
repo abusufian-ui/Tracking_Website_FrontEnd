@@ -114,14 +114,20 @@
             <small>We respect your privacy and will only use your info for shipment updates.</small>
         </section>
         <section class="support-section">
-            <button class="support-big-btn" onclick="window.location.href='mailto:support@trackitnow.com'">
-                <span>
-                    CONTACT SUPPORT
-                    <img src="support.png" alt="Support">
-                </span>
-            </button>
-        </section>
-
+    <button id="supportBtn" class="support-big-btn">
+        <span>
+            CONTACT SUPPORT
+            <img src="support.png" alt="Support">
+        </span>
+    </button>
+    <!-- Popup div -->
+    <div id="supportPopup" class="support-popup" style="display: none;">
+        <h3>Need Help?</h3>
+        <p>Helpline: <a href="tel:+123456789">+1 234 567 89</a></p>
+        <p>Email: <a href="mailto:support@trackitnow.com">support@trackitnow.com</a></p>
+    </div>
+</section>
+<script src="supportPopup.js"></script>
     </main>
     <script>
     function copyTrackingId() {

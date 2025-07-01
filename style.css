@@ -540,6 +540,47 @@ header {
     background: #E9E8ED;
 }
 
+.support-section {
+    position: relative;
+    display: inline-block; /* So popup is tied to this section only */
+}
+
+.support-popup {
+    position: absolute;
+    bottom: 100%; /* place above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+    border: 2px solid #BC1C2C;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    padding: 20px 24px;
+    color: #2a3a5a;
+    z-index: 1000;
+    min-width: 220px;
+    margin-bottom: 10px; /* spacing above button */
+}
+
+.support-popup h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #BC1C2C;
+    font-size: 1.2rem;
+}
+
+.support-popup p {
+    margin: 6px 0;
+}
+
+.support-popup a {
+    color: #BC1C2C;
+    text-decoration: none;
+}
+
+.support-popup a:hover {
+    text-decoration: underline;
+}
+
 #add-tracking-id,
 #tracking-form button[type="submit"] {
     color:#BC1C2C;
