@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  background-color: #333;
+}
+
+header .logo img {
+  height: 50px;
+}
+
+.main-nav .nav-button {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.main-nav .nav-button:hover {
+  text-decoration: underline;
+}
+
+.support img {
+  height: 40px;
+}
+
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #1a1a1a;
+  color: white;
+  position: relative;
+}
+
+.marquee:before,
+.marquee:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.marquee:before {
+  left: 0;
+  background: linear-gradient(to right, #1a1a1a 0%, transparent 100%);
+}
+
+.marquee:after {
+  right: 0;
+  background: linear-gradient(to left, #1a1a1a 0%, transparent 100%);
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  padding: 6px 0; /* Reduced from 12px */
+  animation: scroll-left 20s linear infinite;
+  font-size: 15px; /* Reduced from 17px */
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  margin: 0 40px;
+  position: relative;
+}
+
+.marquee-item:after {
+  content: "•";
+  margin-left: 30px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 20px; /* Slightly smaller bullet */
+}
+
+.marquee-alert {
+  color: #ff4757;
+  font-weight: bold;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.tracking-section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.tracking-section input {
+  padding: 10px;
+  margin: 5px;
+  width: 250px;
+}
+
+.button-group {
+  margin-top: 10px;
+}
+
+.btn {
+  padding: 10px 20px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.btn-clear {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.services-section {
+  background: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.carousel-slide {
+  display: none;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+}
+
+.carousel-controls button {
+  margin: 10px;
+}
+
+.subscribe-section {
+  padding: 40px;
+  text-align: center;
+  background: #333;
+  color: white;
+}
+
+.subscribe-form input[type="email"] {
+  padding: 10px;
+  width: 250px;
+}
+
+.footer-links {
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-links a {
+  color: #333;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  text-align: center;
+  padding: 10px;
+}
+
+.form-feedback {
+  margin-top: 10px;
+  font-weight: bold;
+}

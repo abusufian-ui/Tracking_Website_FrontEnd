@@ -1,0 +1,1196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+    gap: 50px;  
+}
+.tracking-id-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+#tracking-id{
+    font-family: monospace;
+    font-size: 2.2rem;
+}
+.subscribe-section {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.subscribe-section h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #BC1C2C;
+}
+.subscribe-input{
+        padding-right: 5rem;
+}
+
+/* Marquee Alert */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #1a1a1a;
+  color: white;
+  position: relative;
+}
+
+.marquee:before,
+.marquee:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 60px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.marquee:before {
+  left: 0;
+  background: linear-gradient(to right, #1a1a1a 0%, transparent 100%);
+}
+
+.marquee:after {
+  right: 0;
+  background: linear-gradient(to left, #1a1a1a 0%, transparent 100%);
+}
+
+.marquee-content {
+  display: flex;
+  align-items: center;
+  padding: 10px 0; /* Reduced from 12px */
+  animation: scroll-left 20s linear infinite;
+  font-size: 17px; /* Reduced from 17px */
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.marquee-item {
+  display: flex;
+  align-items: center;
+  margin: 0 40px;
+  position: relative;
+}
+
+.marquee-item:after {
+  content: "•";
+  margin-left: 30px;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 20px; /* Slightly smaller bullet */
+}
+
+.marquee-alert {
+    color: #FFD700;
+    font-weight: 700;
+}
+
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+.subscribe-form {
+
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.tracking-id-container{
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    margin-bottom: 2rem;
+}
+h2{
+    font-size: 2.2rem; 
+    background: #f0f4fa; 
+    padding: 1rem 2.5rem; 
+    border-radius: 1.5rem; 
+    color: #2a3a5a; 
+    font-weight: 700; 
+    letter-spacing: 2px; 
+    margin-bottom: 0.7rem; 
+    box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+}
+#tracking_Id
+.subscribe-form input[type="email"] {
+color:#BC1C2C;
+  padding: 10px 14px;
+  font-size: 15px;
+  border: 1px solid #DC8C94;
+  outline: none;
+  width: 240px;
+}
+
+.social-section h3 {
+  margin-bottom: 12px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.subscribe-form button {
+  background-color: #BC1C2C;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.subscribe-form button:hover {
+  background-color: #D46D79;
+  transform: translateY(-2px);
+}
+.tracking-main {
+        max-width: 700px;
+        margin: 40px auto 60px auto;
+        padding: 24px;
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+    }
+    .tracking-status h2 {
+        margin-bottom: 24px;
+        font-size: 1.3em;
+        color: #222;
+    }
+    .status-steps {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin-bottom: 32px;
+    }
+    .step {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex: 1;
+        position: relative;
+    }
+    .step:not(:last-child)::after {
+        content: '';
+        position: absolute;
+        top: 18px;
+        right: -50%;
+        width: 100%;
+        height: 4px;
+        background: #e0e0e0;
+        z-index: 0;
+    }
+    .step.completed:not(:last-child)::after {
+        background: #4caf50;
+    }
+    .dot {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        background: #e0e0e0;
+        margin-bottom: 8px;
+        border: 3px solid #e0e0e0;
+        box-shadow: none;
+        z-index: 1;
+        opacity: 0.6; /* dull by default */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 1.2em;
+        color: inherit;
+    }
+    .step.completed .dot {
+        background: #4caf50;
+        border-color: #4caf50;
+        opacity: 1;
+        color: inherit;
+    }
+    .step.active .dot {
+        background: #fff;
+        border-color: #ff1744;
+        box-shadow: 0 0 0 6px rgba(255,23,68,0.3);
+        opacity: 1;
+        color: inherit;
+    }
+    .step.pending .dot {
+        background: #bdbdbd; /* dull gray for pending */
+        border-color: #bdbdbd;
+        opacity: 0.7;
+        color: inherit;
+    }
+    .step.issue .dot {
+    background: #FFD700; /* Yellow background */
+    border-color: #FFD700;
+    color: #ff1744;
+    opacity: 1;
+    font-size: large;
+    position: relative;
+    animation: pulse 1.5s infinite;
+}
+    .step.issue .dot::after {
+    content: "!";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -60%);
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff1744;
+    pointer-events: none;
+}
+
+   .step.issue span {
+    color: #FFD700;
+    font-weight: bold;
+}
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 215, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 215, 0, 0); }
+}
+    .step.active span {
+        color: #ff1744;
+        font-weight: bold;
+    }
+    .step.completed span {
+        color: #4caf50;
+        font-weight: bold;
+    }
+    .step.pending span {
+        color: #bdbdbd;
+        font-weight: 500;
+    }
+    .step.issue span {
+        color: #FFD600;
+        font-weight: bold;
+    }
+    .driver-info {
+        margin-bottom: 32px;
+    }
+    .driver-card {
+        display: flex;
+        align-items: center;
+        background: #f7f7f7;
+        border-radius: 10px;
+        padding: 16px;
+        box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    }
+    .driver-photo {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        margin-right: 18px;
+        object-fit: cover;
+        border: 2px solid #eee;
+    }
+    .driver-details p {
+        margin: 4px 0;
+        color: #333;
+    }
+    .map-section .map-container {
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 1px 8px rgba(0,0,0,0.08);
+        margin-top: 10px;
+    }
+.tracking-id-wrapper input[type="text"] {
+    flex: 1;
+}
+
+#Main-Cover {
+  background-image: url("Main\ cover.jpg"); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  height: 90vh; /* Adjust height as needed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+
+.tracking-id-wrapper button[type="button"] {
+    background: #BC1C2C;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.tracking-id-wrapper button[type="button"]:hover {
+    background: #D46D79;
+    transform: scale(1.1);
+}
+header {
+    background-color: #BC1C2C;
+    color: #E9E8ED;
+    box-shadow: 0 2px 10px rgba(188, 28, 44, 0.12);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+.tracking-section {
+    background-color: rgba(0,0,0,0.07);
+    padding: 8px 125 px;
+    padding-right: 125px;
+    box-shadow: 0 4px 24px rgba(188,28,44,0.10);
+    max-width: 480px;
+    margin: 50px auto 0 auto;
+}
+
+#tracking-form {
+    width: 180% ;
+    display: flex;
+
+    flex-direction: column;
+    gap: 18px;
+}
+
+#tracking-ids-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    color: #BC1C2C;
+}
+
+#tracking-ids-container label {
+    font-size: 15px;
+    margin-bottom: 2px;
+    font-weight: 500;
+}
+
+.support-big-btn {
+            background: #BC1C2C;
+            color: #fff;
+            border: none;
+            padding: 20px 60px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            box-shadow: 0 4px 18px rgba(188,28,44,0.13);
+            cursor: pointer;
+            transition: background 0.22s, transform 0.18s;
+            letter-spacing: 1px;
+            outline: none;
+        }
+        .support-big-btn:hover {
+            background: #D46D79;
+            transform: translateY(-3px) scale(1.04);
+        }
+#tracking-ids-container input[type="text"] {
+    padding: 10px 14px;
+    border: 1px solid #DC8C94;
+    background: #fff;
+    color: #BC1C2C;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.2s;
+}
+.services-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #f9f9f9; /* Light gray background */
+}
+
+.carousel-slide {
+  position: absolute;
+  width: 100%;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade {
+  animation: fadeEffect 1s;
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0.4;}
+  to {opacity: 1;}
+}
+
+.services-section h2 {
+    font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+.services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.card{
+    background: white;
+    text-align: center;
+  border-radius: 10px;
+  padding: 25px;
+  height: 150px;
+  width: 300px;
+  box-shadow: 4px 4px 4px rgba(188,28, 44, 0.1);
+}
+
+.service-cards {
+    /* background: #DC8C94;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px rgba(188,28,44,0.08);
+    padding: 32px 24px 28px 24px;
+    max-width: 250px;
+    min-width: 210px;
+    flex: 1 1 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.22s, box-shadow 0.22s;*/
+    
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.service-card:hover {
+    transform: translateY(-8px) scale(1.04);
+    box-shadow: 0 6px 24px rgba(212,109,121,0.18);
+}
+
+.service-card img {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 18px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 8px rgba(212,109,121,0.10));
+}
+
+.service-card h3 {
+    color: #BC1C2C;
+    font-size: 1.18rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 0.5px;
+}
+
+.service-card p {
+    color: #1a1a1a;
+    font-size: 15px;
+    opacity: 0.92;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .services-list {
+        gap: 18px;
+    }
+    .service-card {
+        max-width: 48vw;
+        min-width: 160px;
+        padding: 24px 10px 20px 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-section {
+        padding: 30px 0 18px 0;
+        border-radius: 12px;
+    }
+    .services-section h2 {
+        font-size: 1.3rem;
+        margin-bottom: 18px;
+    }
+    .services-list {
+        flex-direction: column;
+        gap: 14px;
+    }
+    .service-card {
+        max-width: 98vw;
+        min-width: 0;
+        padding: 18px 6px 14px 6px;
+    }
+}
+#tracking-ids-container input[type="text"]:focus {
+    border-color: #BC1C2C;
+    background: #E9E8ED;
+}
+
+#add-tracking-id,
+#tracking-form button[type="submit"] {
+    color:#BC1C2C;
+    padding: 10px 18px;
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    margin-top: 8px;
+}
+#add-tracking-id {
+    background: #BC1C2C;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+#add-tracking-id:hover {
+    background: #D46D79;
+    color: #fff;
+    transform: translateY(-2px) scale(1.04);
+}
+
+#tracking-form button[type="submit"] {
+    background: #BC1C2C;
+    color: #fff;
+    margin-top: 0;
+}
+
+#tracking-form button[type="submit"]:hover {
+    background: #D46D79;
+    transform: translateY(-2px) scale(1.04);
+}
+
+@media (max-width: 600px) {
+    .tracking-section {
+        padding: 18px 6px;
+        max-width: 98vw;
+    }
+    #tracking-form {
+        gap: 10px;
+    }
+}
+
+.logo img {
+    width: 300px; 
+    height: auto; 
+    transition: transform 0.3s ease;
+}
+
+.support img {
+    width: 50px;
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover img {
+    transform: scale(1.1);
+}
+
+.support:hover img {
+    transform: scale(1.1);
+}
+
+.main-nav {
+    display: flex;
+    gap: 20px; 
+    justify-self: left;
+}
+
+ .nav-button {
+    color: #BC1C2C;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    transition: all 0.3s ease;
+    position: relative;
+    background: #E9E8ED;
+}
+
+.nav-button:hover {
+    background-color: #D46D79;
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.nav-button.active {
+    background-color: #BC1C2C;
+    color: #fff;
+    font-weight: 600;
+}
+
+.nav-button::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #BC1C2C;
+    transition: width 0.3s ease;
+} 
+
+.nav-button:hover::after {
+    width: 100%;
+}
+
+/* footer{
+    background-color:rgb(128,128,128,0.5);
+    padding-bottom: 150px;
+}
+
+.social-icons{
+    display: flex inline;
+    gap:10px;  
+}
+.icon{
+    display: flex inline;
+    justify-content: left;
+    padding-right: 10px;
+} */
+
+/*Footer Before*/
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #BC1C2C;
+    background: linear-gradient(90deg, #E9E8ED 60%, #DC8C94 100%);
+    box-shadow: 0 -2px 10px rgba(188,28,44,0.08);
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    margin-top: 40px;
+    padding: 40px 20px 150px 20px;
+    position: relative;
+}
+
+footer h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: #BC1C2C;
+}
+
+footer p {
+    margin-bottom: 20px;
+    opacity: 0.9;
+    color: #BC1C2C;
+}
+
+.social-icons {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 15px;
+}
+
+.social-icons a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #D46D79;
+    color: #fff;
+    font-size: 22px;
+    transition: background 0.3s, transform 0.3s;
+    text-decoration: none;
+    box-shadow: 0 2px 8px rgba(212,109,121,0.08);
+}
+ 
+
+        .tracking-id-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .tracking-id-header {
+            font-size: 2.2rem;
+            background: #f0f4fa;
+            padding: 1rem 2.5rem;
+            border-radius: 1.5rem;
+            color: #2a3a5a;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 0.7rem;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+        }
+        #tracking-id {
+            font-family: monospace;
+            font-size: 2.2rem;
+            cursor: pointer;
+        }
+        .shipment-details {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        .shipper-box, .consignee-box {
+            flex: 1;
+            background: #f8fafc;
+            border-radius: 1.2rem;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+            padding: 2rem;
+        }
+        .shipper-box h3, .consignee-box h3 {
+            color: #2a3a5a;
+            margin-bottom: 1rem;
+        }
+        .order-issue-warning {
+            background: linear-gradient(90deg, #fffbe6 0%, #ffe6e6 100%);
+            border: 2px solid #ffb300;
+            border-radius: 1.2rem;
+            box-shadow: 0 2px 12px rgba(255, 179, 0, 0.08);
+            padding: 2rem 2.5rem;
+            margin: 2.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .order-issue-warning img {
+            height: 6rem;
+            width: 6rem;
+            flex-shrink: 0;
+        }
+        .order-issue-warning h3 {
+            color: #d35400;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .order-issue-warning p {
+            color: #7a4f01;
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
+        }
+        .order-issue-warning p:last-child {
+            margin-bottom: 0;
+        }
+        .tracking-updates-section {
+            background: #eaf6ff;
+            border-radius: 1.2rem;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+            padding: 2rem 2.5rem;
+            margin: 2.5rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .tracking-updates-section h3 {
+            color: #2a3a5a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .tracking-updates-section p {
+            color: #345;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+        .tracking-updates-form {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .tracking-updates-form input[type="email"],
+        .tracking-updates-form input[type="tel"] {
+            padding: 0.7rem 1rem;
+            border-radius: 0.7rem;
+            border: 1px solid #bcd;
+        }
+        .tracking-updates-form span {
+            align-self: center;
+            color: #888;
+        }
+        .tracking-updates-form button {
+            padding: 0.7rem 2rem;
+            border-radius: 0.7rem;
+            background: #2a3a5a;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+        .tracking-updates-section small {
+            color: #888;
+            margin-top: 0.7rem;
+        }
+        .support-section {
+            display: flex;
+            justify-content: center;
+            margin: 32px 0;
+        }
+        .support-big-btn span {
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .support-big-btn img {
+            height: 1.5em;
+            vertical-align: middle;
+        }
+    
+        .tracking-id-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 2rem;
+        }
+        .tracking-status h2 {
+            font-size: 2.2rem;
+            background: #f0f4fa;
+            padding: 1rem 2.5rem;
+            color: #2a3a5a;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 0.7rem;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+        }
+        #tracking-id {
+            font-family: monospace;
+            font-size: 2.2rem;
+            cursor: pointer;
+        }
+        .shipment-details {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        .shipper-box, .consignee-box {
+            flex: 1;
+            background: #f8fafc;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+            padding: 2rem;
+        }
+        .shipper-box h3, .consignee-box h3 {
+            color: #2a3a5a;
+            margin-bottom: 1rem;
+        }
+        .tracking-updates-section {
+            background: #eaf6ff;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+            padding: 2rem 2.5rem;
+            margin: 2.5rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .tracking-updates-section h3 {
+            color: #2a3a5a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .tracking-updates-section p {
+            color: #345;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+        .tracking-updates-form {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .tracking-updates-form input[type="email"],
+        .tracking-updates-form input[type="tel"] {
+            padding: 0.7rem 1rem;
+            border: 1px solid #bcd;
+        }
+        .tracking-updates-form span {
+            align-self: center;
+            color: #888;
+        }
+        .tracking-updates-form button {
+            padding: 0.7rem 2rem;
+            background: #2a3a5a;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+        .tracking-updates-section small {
+            color: #888;
+            margin-top: 0.7rem;
+        }
+        .support-section {
+            display: flex;
+            justify-content: center;
+            margin: 32px 0;
+        }
+        .support-big-btn span {
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .support-big-btn img {
+            height: 1.5em;
+            vertical-align: middle;
+        }
+.social-icons a:hover {
+    background: #BC1C2C;
+    color: #fff;
+    transform: scale(1.12) translateY(-3px);
+}
+
+footer .footer-links {
+    margin-top: 18px;
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #BC1C2C;
+    opacity: 0.85;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.2s, opacity 0.2s;
+}
+
+.footer-links a:hover {
+    color: #D46D79;
+    opacity: 1;
+    text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+    footer {
+        padding: 30px 8px 100px 8px;
+        font-size: 14px;
+        border-radius: 18px 18px 0 0;
+    }
+    .footer-links {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+}
+
+
+        .tracking-status h2 {
+            font-size: 2.2rem;
+            background: #f0f4fa;
+            padding: 1rem 2.5rem;
+            border-radius: 1.5rem;
+            color: #2a3a5a;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-align: center;
+            margin-bottom: 0.7rem;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+        }
+        #tracking-id {
+            font-family: monospace;
+            font-size: 2.2rem;
+            cursor: pointer;
+        }
+        .shipment-details {
+            display: flex;
+            justify-content: space-between;
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        .shipper-box, .consignee-box {
+            flex: 1;
+            background: #f8fafc;
+            border-radius: 1.2rem;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+            padding: 2rem;
+        }
+        .shipper-box h3, .consignee-box h3 {
+            color: #2a3a5a;
+            margin-bottom: 1rem;
+        }
+        .order-issue-warning {
+            background: linear-gradient(90deg, #fffbe6 0%, #ffe6e6 100%);
+            border: 2px solid #ffb300;
+            border-radius: 1.2rem;
+            box-shadow: 0 2px 12px rgba(255, 179, 0, 0.08);
+            padding: 2rem 2.5rem;
+            margin: 2.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .order-issue-warning img {
+            height: 6rem;
+            width: 6rem;
+            flex-shrink: 0;
+        }
+        .order-issue-warning h3 {
+            color: #d35400;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .order-issue-warning p {
+            color: #7a4f01;
+            font-size: 1.1rem;
+            margin-bottom: 0.7rem;
+        }
+        .tracking-updates-section {
+            background: #eaf6ff;
+            border-radius: 1.2rem;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+            padding: 2rem 2.5rem;
+            margin: 2.5rem 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .tracking-updates-section h3 {
+            color: #2a3a5a;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .tracking-updates-section p {
+            color: #345;
+            font-size: 1.1rem;
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+        .tracking-updates-form {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .tracking-updates-form input[type="email"],
+        .tracking-updates-form input[type="tel"] {
+            padding: 0.7rem 1rem;
+            border-radius: 0.7rem;
+            border: 1px solid #bcd;
+        }
+        .tracking-updates-form span {
+            align-self: center;
+            color: #888;
+        }
+        .tracking-updates-form button {
+            padding: 0.7rem 2rem;
+            border-radius: 0.7rem;
+            background: #2a3a5a;
+            color: #fff;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+        .tracking-updates-section small {
+            color: #888;
+            margin-top: 0.7rem;
+        }
+        .support-section {
+            display: flex;
+            justify-content: center;
+            margin: 32px 0;
+        }
+        .support-big-btn {
+            padding: 1rem 2.5rem;
+            border-radius: 1rem;
+            background: #BC1C2C;
+            color: white;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            font-size: 1.1rem;
+            
+            box-shadow: 0 2px 8px rgba(44,62,80,0.07);
+        }
+        .support-big-btn span {
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .support-big-btn img {
+            height: 1.5em;
+            vertical-align: middle;
+        } 
+        .error-container {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(188,28,44,0.10);
+            margin: 60px auto 40px auto;
+            max-width: 480px;
+            padding: 48px 24px;
+        }
+        .error-icon {
+            font-size: 4.5rem;
+            color: #FFD700;
+            margin-bottom: 18px;
+            animation: pulse 1.5s infinite;
+        }
+        .error-title {
+            font-size: 2.2rem;
+            color: #BC1C2C;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .error-message {
+            font-size: 1.15rem;
+            color: #2a3a5a;
+            margin-bottom: 28px;
+            opacity: 0.92;
+        }
+        .retry-btn {
+            background: #BC1C2C;
+            color: #fff;
+            border: none;
+            padding: 14px 38px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.22s, transform 0.18s;
+            box-shadow: 0 2px 8px rgba(188,28,44,0.10);
+        }
+        .retry-btn:hover {
+            background: #D46D79;
+            transform: translateY(-2px) scale(1.04);
+        }
+
+
+

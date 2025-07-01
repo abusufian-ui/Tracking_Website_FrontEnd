@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrackItNow - HomePage</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="index.html" class="logo">
+            <img src="logo.png" alt="TrackItNow Logo">
+        </a>
+        <div class="header-content">
+        <nav class="main-nav">
+            <a href="index.html" class="nav-button">Home</a>
+            <a href="contact.html" class="nav-button">Contact</a>
+            <a href="about.html" class="nav-button">About</a>
+        </nav>
+        <a href="#" class="support">
+            <img src="support.png" alt="Icon">
+        </a>
+        </div>
+    </header>
+    <div class="marquee" style="background-color: #1a1a1a;">
+    <div class="marquee-content">
+        <span class="marquee-item" >🚛 <span class="marquee-alert">ALERT:</span> Delays expected in Northern regions due to weather</span>
+        <span class="marquee-item">📦 Your package #TRK-78451 is out for delivery</span>
+        <span class="marquee-item">⚠️ <span class="marquee-alert">URGENT:</span> Updated customs requirements for international shipments</span>
+        <span class="marquee-item">🎉 <span class="marquee-alert">NEW:</span> Same-day delivery now available in 3 more cities</span>
+    </div>
+</div>
+    <main class="tracking-main">
+        <section class="tracking-status">
+            <div class="tracking-id-container" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 2rem;"></div>
+                <h2 style="font-size: 2.2rem; background: #f0f4fa; padding: 1rem 2.5rem; border-radius: 1.5rem; color: #2a3a5a; font-weight: 700; letter-spacing: 2px; text-align: center;margin-bottom: 0.7rem; box-shadow: 0 2px 8px rgba(44,62,80,0.07);">
+                 <span id="tracking-id" style="font-family: monospace; font-size: 2.2rem;" onclick="copyTrackingId()">10086000000004</span>
+                </h2>
+            </div>
+            <div class="status-steps">
+                <div class="step active">
+                    <div class="dot"></div>
+                    <span>BOOKED</span>
+                </div>
+                <div class="step pending">
+                    <div class="dot"></div>
+                    <span>DISPATCHED</span>
+                </div>
+                <div class="step pending">
+                    <div class="dot"></div>
+                    <span>ARRIVED</span>
+                </div>
+                <div class="step pending">
+                    <div class="dot"></div>
+                    <span>ON ROUTE</span>
+                </div>
+                <div class="step pending">
+                    <div class="dot"></div>
+                    <span>DELIVERED</span>
+                </div>
+            </div>
+        </section>
+        <section class="shipment-details" style="display: flex; justify-content: space-between; gap: 2rem; margin: 2.5rem 0;">
+            <div class="shipper-box" style="flex: 1; background: #f8fafc; border-radius: 1.2rem; box-shadow: 0 2px 8px rgba(44,62,80,0.07); padding: 2rem;">
+                <h3 style="color: #2a3a5a; margin-bottom: 1rem;">Shipper Details</h3>
+                <p><strong>Name:</strong> Adeel Logistics Pvt Ltd</p>
+                <p><strong>Address:</strong> 12-B, Industrial Area, Lahore</p>
+                <p><strong>Phone:</strong> +92 321 1234567</p>
+                <p><strong>Email:</strong> adeel@logistics.com</p>
+                <p><strong>Date of Booking:</strong> 2024-06-10</p>
+                <p><strong>Weight:</strong> 18.5 kg</p>
+                <p><strong>Volume:</strong> 0.12 m³</p>
+            </div>
+            <div class="consignee-box" style="flex: 1; background: #f8fafc; border-radius: 1.2rem; box-shadow: 0 2px 8px rgba(44,62,80,0.07); padding: 2rem;">
+                <h3 style="color: #2a3a5a; margin-bottom: 1rem;">Consignee Details</h3>
+                <p><strong>Name:</strong> Sara Ahmed</p>
+                <p><strong>Address:</strong> 45-G, Model Town, Karachi</p>
+                <p><strong>Phone:</strong> +92 334 9876543</p>
+                <p><strong>Email:</strong> sara.ahmed@email.com</p>
+                <p><strong>Expected Delivery:</strong> 2024-06-13</p>
+                <p><strong>Weight:</strong> 18.5 kg</p>
+                <p><strong>Volume:</strong> 0.12 m³</p>
+            </div>
+        </section>
+<section class="tracking-updates-section" style="background: #eaf6ff; border-radius: 1.2rem; box-shadow: 0 2px 8px rgba(44,62,80,0.07); padding: 2rem 2.5rem; margin: 2.5rem 0; display: flex; flex-direction: column; align-items: center;">
+            <h3 style="color: #2a3a5a; font-size: 1.5rem; margin-bottom: 1rem; font-weight: 700; letter-spacing: 1px;">
+            Get Notified About Tracking Updates
+            </h3>
+            <p style="color: #345; font-size: 1.1rem; margin-bottom: 1.2rem; text-align: center;">
+            Enter your email or phone number to receive updates about your shipment, even after you leave this page.
+            </p>
+            <form class="tracking-updates-form" style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;" onsubmit="event.preventDefault(); alert('You will receive tracking updates!');">
+            <input type="email" placeholder="Email address" style="padding: 0.7rem 1rem; border-radius: 0.7rem; border: 1px solid #bcd;" required>
+            <span style="align-self: center; color: #888;">or</span>
+            <input type="tel" placeholder="Phone number" style="padding: 0.7rem 1rem; border-radius: 0.7rem; border: 1px solid #bcd;">
+            <button type="submit" style="padding: 0.7rem 2rem; border-radius: 0.7rem; background: #2a3a5a; color: #fff; font-weight: 600; border: none; cursor: pointer;">
+                Get Updates
+            </button>
+            </form>
+            <small style="color: #888; margin-top: 0.7rem;">We respect your privacy and will only use your info for shipment updates.</small>
+        </section>
+         <section>
+            <div id="cutoff-timer" style="background: #fff0f0; color: #d32f2f; border: 2px solid #d32f2f; border-radius: 1rem; padding: 1.2rem 2.5rem; font-size: 2rem; font-weight: bold; display: flex; align-items: center; gap: 1rem; box-shadow: 0 2px 8px rgba(211,47,47,0.07);">
+                <span style="margin-right: 0.7rem;">⏰</span>
+                <span>
+                    <span style="font-size: 2.2rem;" id="cutoff-countdown">18:17:00</span>
+                    <span style="font-size: 1.1rem; font-weight: 500; margin-left: 0.7rem;">CUTOFF time to change details</span>
+                </span>
+                <button id="change-details-btn" title="Change Consignee Details" style="margin-left: 1.5rem; background: none; border: none; cursor: pointer;">
+                    <svg width="28" height="28" fill="#d32f2f" viewBox="0 0 24 24"><path d="M3 17.25V21h3.75l11.06-11.06-3.75-3.75L3 17.25zm17.71-10.04a1.003 1.003 0 0 0 0-1.42l-2.54-2.54a1.003 1.003 0 0 0-1.42 0l-1.83 1.83 3.75 3.75 1.83-1.83z"/></svg>
+                </button>
+            </div>
+        </section>
+        <script>
+            // Countdown logic
+            let cutoffSeconds = 18 * 3600 + 17 * 60; // 18 hours 17 minutes
+            function updateCutoffTimer() {
+                if (cutoffSeconds < 0) return;
+                const h = String(Math.floor(cutoffSeconds / 3600)).padStart(2, '0');
+                const m = String(Math.floor((cutoffSeconds % 3600) / 60)).padStart(2, '0');
+                const s = String(cutoffSeconds % 60).padStart(2, '0');
+                document.getElementById('cutoff-countdown').textContent = `${h}:${m}:${s}`;
+                cutoffSeconds--;
+            }
+            updateCutoffTimer();
+            setInterval(updateCutoffTimer, 1000);
+
+            // Change Consignee Details logic
+            document.getElementById('change-details-btn').onclick = function() {
+                const box = document.querySelector('.consignee-box');
+                if (!box) return;
+                box.innerHTML = `
+                    <h3 style="color: #2a3a5a; margin-bottom: 1rem;">Edit Consignee Details</h3>
+                    <form id="consignee-edit-form" style="display: flex; flex-direction: column; gap: 0.7rem;">
+                        <label><strong>Name:</strong> <input type="text" name="name" value="Sara Ahmed" required style="margin-left:0.5rem; padding:0.3rem 0.7rem; border-radius:0.5rem; border:1px solid #bcd;"></label>
+                        <label><strong>Address:</strong> <input type="text" name="address" value="45-G, Model Town, Karachi" required style="margin-left:0.5rem; padding:0.3rem 0.7rem; border-radius:0.5rem; border:1px solid #bcd;"></label>
+                        <label><strong>Phone:</strong> <input type="tel" name="phone" value="+92 334 9876543" required style="margin-left:0.5rem; padding:0.3rem 0.7rem; border-radius:0.5rem; border:1px solid #bcd;"></label>
+                        <label><strong>Email:</strong> <input type="email" name="email" value="sara.ahmed@email.com" required style="margin-left:0.5rem; padding:0.3rem 0.7rem; border-radius:0.5rem; border:1px solid #bcd;"></label>
+                        <label><strong>Expected Delivery:</strong> <input type="date" name="delivery" value="2024-06-13" required style="margin-left:0.5rem; padding:0.3rem 0.7rem; border-radius:0.5rem; border:1px solid #bcd;"></label>
+                        <label><strong>Weight:</strong> <input type="number" name="weight" value="18.5" step="0.1" required style="margin-left:0.5rem; width:5rem; padding:0.3rem 0.7rem; border-radius:0.5rem; border:1px solid #bcd;"> kg</label>
+                        <label><strong>Volume:</strong> <input type="number" name="volume" value="0.12" step="0.01" required style="margin-left:0.5rem; width:5rem; padding:0.3rem 0.7rem; border-radius:0.5rem; border:1px solid #bcd;"> m³</label>
+                        <button type="submit" style="margin-top:1rem; padding:0.7rem 2rem; border-radius:0.7rem; background:#2a3a5a; color:#fff; font-weight:600; border:none; cursor:pointer;">Save</button>
+                    </form>
+                `;
+                document.getElementById('consignee-edit-form').onsubmit = function(e) {
+                    e.preventDefault();
+                    const data = Object.fromEntries(new FormData(this).entries());
+                    box.innerHTML = `
+                        <h3 style="color: #2a3a5a; margin-bottom: 1rem;">Consignee Details</h3>
+                        <p><strong>Name:</strong> ${data.name}</p>
+                        <p><strong>Address:</strong> ${data.address}</p>
+                        <p><strong>Phone:</strong> ${data.phone}</p>
+                        <p><strong>Email:</strong> ${data.email}</p>
+                        <p><strong>Expected Delivery:</strong> ${data.delivery}</p>
+                        <p><strong>Weight:</strong> ${data.weight} kg</p>
+                        <p><strong>Volume:</strong> ${data.volume} m³</p>
+                    `;
+                };
+            };
+        </script>
+        <section class="support-section" style="display: flex; justify-content: center; margin: 32px 0;">
+            <button class="support-big-btn" onclick="window.location.href='mailto:support@trackitnow.com'">
+                <span style="font-size: 1.3rem; font-weight: 600; display: flex; align-items: center; gap: 0.5rem;">
+                    CONTACT SUPPORT
+                    <img src="support.png" alt="Support" style="height: 1.5em; vertical-align: middle;">
+                </span>
+            </button>
+        </section>
+
+    </main>
+     <footer>
+        <div class="subscribe-section">
+    <h3>Subscribe for Updates</h3>
+    <form class="subscribe-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+      <input type="email" id="EmailLable" placeholder="Enter your email" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+  <div class="social-section">
+    <h3>Follow Trackio</h3>
+    <div class="social-icons">
+      <a href="#" class="icon" aria-label="Facebook">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M22.676 0H1.326C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.326 24h11.498v-9.294H9.692v-3.622h3.132V8.413c0-3.1 1.894-4.788 4.66-4.788 1.325 0 2.463.099 2.796.143v3.24l-1.918.001c-1.504 0-1.796.715-1.796 1.763v2.312h3.588l-.467 3.622h-3.121V24h6.116c.73 0 1.324-.593 1.324-1.326V1.326C24 .593 23.407 0 22.676 0z"/></svg>
+      </a>
+      <a href="#" class="icon" aria-label="Twitter">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M24 4.557a9.93 9.93 0 0 1-2.828.775 4.933 4.933 0 0 0 2.165-2.724c-.951.564-2.005.974-3.127 1.195a4.918 4.918 0 0 0-8.384 4.482C7.69 8.094 4.067 6.13 1.64 3.161a4.822 4.822 0 0 0-.666 2.475c0 1.708.869 3.215 2.188 4.099A4.902 4.902 0 0 1 .96 9.13v.062a4.926 4.926 0 0 0 3.946 4.827 4.996 4.996 0 0 1-2.212.084 4.937 4.937 0 0 0 4.604 3.419A9.867 9.867 0 0 1 0 19.54a13.94 13.94 0 0 0 7.548 2.212c9.056 0 14.01-7.513 14.01-14.01 0-.213-.005-.425-.014-.636A10.012 10.012 0 0 0 24 4.557z"/></svg>
+      </a>
+      <a href="#" class="icon" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M22.225 0H1.771C.792 0 0 .771 0 1.729v20.542C0 23.229.792 24 1.771 24h20.451C23.206 24 24 23.229 24 22.271V1.729C24 .771 23.206 0 22.225 0zM7.119 20.452H3.56V9h3.559v11.452zM5.34 7.577c-1.136 0-2.057-.92-2.057-2.057a2.058 2.058 0 1 1 4.115 0c0 1.137-.92 2.057-2.058 2.057zm14.994 12.875h-3.558V14.78c0-1.351-.026-3.09-1.882-3.09-1.884 0-2.172 1.47-2.172 2.985v5.777h-3.558V9h3.415v1.561h.048c.476-.9 1.636-1.848 3.364-1.848 3.6 0 4.266 2.368 4.266 5.448v6.291z"/></svg>
+      </a>
+      <a href="#" class="icon" aria-label="Instagram">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.206.057 2.003.248 2.478.415.59.207 1.01.457 1.456.903.447.447.696.866.903 1.456.167.475.358 1.272.415 2.478.058 1.266.07 1.645.07 4.849s-.012 3.584-.07 4.85c-.057 1.206-.248 2.003-.415 2.478a4.411 4.411 0 0 1-.903 1.456 4.41 4.41 0 0 1-1.456.903c-.475.167-1.272.358-2.478.415-1.266.058-1.645.07-4.85.07s-3.584-.012-4.849-.07c-1.206-.057-2.003-.248-2.478-.415a4.414 4.414 0 0 1-1.456-.903 4.412 4.412 0 0 1-.903-1.456c-.167-.475-.358-1.272-.415-2.478C2.175 15.746 2.163 15.367 2.163 12s.012-3.584.07-4.849c.057-1.206.248-2.003.415-2.478a4.41 4.41 0 0 1 .903-1.456A4.41 4.41 0 0 1 5.007 2.648c.475-.167 1.272-.358 2.478-.415 1.266-.058 1.645-.07 4.85-.07zm0 1.838c-3.18 0-3.548.012-4.796.07-1.003.047-1.548.215-1.91.36a2.57 2.57 0 0 0-.937.615 2.57 2.57 0 0 0-.615.937c-.145.362-.313.907-.36 1.91-.058 1.248-.07 1.616-.07 4.796s.012 3.548.07 4.796c.047 1.003.215 1.548.36 1.91.135.34.319.648.615.937.289.289.597.48.937.615.362.145.907.313 1.91.36 1.248.058 1.616.07 4.796.07s3.548-.012 4.796-.07c1.003-.047 1.548-.215 1.91-.36.34-.135.648-.319.937-.615.289-.289.48-.597.615-.937.145-.362.313-.907.36-1.91.058-1.248.07-1.616.07-4.796s-.012-3.548-.07-4.796c-.047-1.003-.215-1.548-.36-1.91a2.57 2.57 0 0 0-.615-.937 2.57 2.57 0 0 0-.937-.615c-.362-.145-.907-.313-1.91-.36-1.248-.058-1.616-.07-4.796-.07zm0 4.838a5.997 5.997 0 1 0 0 11.994 5.997 5.997 0 0 0 0-11.994zm0 9.838a3.841 3.841 0 1 1 0-7.682 3.841 3.841 0 0 1 0 7.682zm6.406-10.845a1.44 1.44 0 1 1-2.881 0 1.44 1.44 0 0 1 2.881 0z"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="index.html">Track</a>
+    <a href="about.html">Services</a>
+    <a href="index.html">Support</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <p class="footer-copy">&copy; 2025 TRACKIO. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
